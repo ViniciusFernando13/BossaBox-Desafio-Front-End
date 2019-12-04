@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <h1>VUTTR</h1>
+  <!-- titulo -->
+
+  <h2>Very Userful Tools to Remember</h2>
+  <!-- subtitulo -->
+
+  <div id="actions" class="row mt-5 mb-3">
+    <div class="col-md-4 col-12 search-field">
+      <input type="text" name="search" id="search" placeholder="search" class="form-control" [(ngModel)]="busca" (ngModelChange)="doSearch()">
+      <fa-icon icon="search"></fa-icon>
+    </div>
+    <!-- input para o texto de pesquisa -->
+
+    <div class="col-md-6 col-12 only-tag">
+      <input type="checkbox" id="only_tag" class="form-check-input" [(ngModel)]="only_tags" (ngModelChange)="doSearch()">
+      <label class="form-check-label" for="only_tag"> search in tags only</label> 
+    </div>
+    <!-- checkbox para flag da pesquisa apenas com as tags -->
+
+    <div class="col-md-2 col-12">
+      <button class="btn primary btn-block" (click)="openModalAddTool()">
+        <fa-icon icon="plus"></fa-icon> Add
+      </button>
+    </div>
+    <!-- botão para adicionar -->
+
+  </div>
+  <!-- campos de pesquisa e botão para adicionar -->
+
+  <div class="container">
+    <app-cards-tools></app-cards-tools>
+    <!-- componente de cards das ferramentas -->
+
+  </div>
+  <!-- container com os cards das ferramentas -->
+
+</div>
+<!-- Conteúdo do corpo -->

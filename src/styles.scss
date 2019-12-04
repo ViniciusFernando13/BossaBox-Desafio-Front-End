@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap');
+*:not(fa-icon, svg, path) {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: #170C3A;
+
+    h1 { /* titulo */
+        font-size: 42px !important;
+        letter-spacing: 0.84px !important;
+        text-align: left;
+    }
+
+    h2 { /* subtitulo */
+        font-size: 36px !important;
+        letter-spacing: 0.72px !important;
+        text-align: left;
+    }
+
+    h3 {
+        font-size: 30px !important;
+        letter-spacing: 0.6px !important;
+        text-align: left;
+    }
+
+}
+input, textarea { /* input */
+    background-color: #F5F4F6 !important;
+    &.ng-invalid.ng-touched {
+        border: 1px solid #F95E5A !important;
+        border-radius: 5px;
+        background-color: #FEEFEE !important;
+    }
+    &:focus {
+        background-color: #EBEAED !important;
+        border: 1px solid #DEDCE1 !important;
+    }
+    &::placeholder {
+        color: #B1ADB9 !important;
+    }
+    &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #B1ADB9 !important;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: #B1ADB9 !important;
+    }
+}
+.required-field {
+    color: #8F8A9B;
+}
+.invalid {
+    color: #F95E5A !important;
+}
+.btn { /* estilo dos botoes */
+    letter-spacing: 0.36px !important;
+    border-radius: 5px !important;
+    &.primary {
+        color: #fff !important;
+        background-color: #365DF0 !important;
+        &:hover {
+            background-color: #2F55CC !important;
+        }
+        &:active {
+            background-color: #244AA8 !important;
+        }
+        &:disabled {
+            color: #E1E7FD !important;
+            background-color: #B9C6FA !important;
+        }
+        &.clear {
+            color: #365DF0 !important;
+            fa-icon, svg, path {
+                color: #365DF0 !important;
+            }
+            background-color: transparent !important;
+            &:hover {
+                color: #365DF0 !important;
+            }
+            &:active {
+                color: #9AAEF7 !important;
+            }            
+        }
+    }
+    &.danger {
+        color: #fff !important;
+        background-color: #F95E5A !important;
+        &:hover {
+            background-color: #CC4C4C !important;
+        }
+        &:active {
+            background-color: #A53F3F !important;
+        }
+        &.clear {
+            color: #F95E5A !important;
+            fa-icon, svg, path {
+                color: #F95E5A !important;
+            }
+            background-color: transparent !important;
+            &:hover {
+                color: #F95E5A !important;
+            }
+            &:active {
+                color: #F95E5A !important;
+            }            
+        }
+    }
+}

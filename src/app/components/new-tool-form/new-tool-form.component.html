@@ -1,0 +1,41 @@
+<div class="container-fluid p-3">
+    <h3><fa-icon icon="plus"></fa-icon> Add new tool</h3>
+    <form class="px-3" [formGroup]="toolForm">
+        <div class="form-group">
+            <label for="title">Tool Name <span class="required-field" [class.invalid]="checkField('title')">*</span></label>
+            <input type="text" class="form-control" formControlName="title" id="title">
+            <ng-container *ngIf="checkField('title') && toolForm.get('title').errors">            
+                <small class="form-text text-right invalid" *ngIf="toolForm.get('title').errors.required">The title is required</small>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="link">Tool Link <span class="required-field" [class.invalid]="checkField('link')">*</span></label>
+            <input type="text" class="form-control" formControlName="link" id="link">
+            <ng-container *ngIf="checkField('link') && toolForm.get('link').errors">            
+                <small class="form-text text-right invalid" *ngIf="toolForm.get('link').errors.required">The link is required</small>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="description">Tool description <span class="required-field" [class.invalid]="checkField('description')">*</span></label>
+            <textarea class="form-control" formControlName="description" rows="5" id="description"></textarea>
+            <ng-container *ngIf="checkField('description') && toolForm.get('description').errors">            
+                <small class="form-text text-right invalid" *ngIf="toolForm.get('description').errors.required">The description is required</small>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags <span class="required-field" [class.invalid]="checkField('tags')">*</span></label>
+            <input type="text" class="form-control" formControlName="tags" id="tags">
+            <ng-container *ngIf="checkField('tags') && toolForm.get('tags').errors">            
+                <small class="form-text text-right invalid" *ngIf="toolForm.get('tags').errors.required">The tags is required</small>
+            </ng-container>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 offset-lg-9 col-md-4 offset-md-8 col-sm-6 offset-sm-6 col-8 offset-4">
+                <button class="btn primary btn-block" [disabled]="toolForm.invalid" (click)="salvar()">
+                    <fa-icon icon="plus"></fa-icon> Add
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
